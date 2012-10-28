@@ -50,6 +50,11 @@ public class NettyServer {
             Executors.newCachedThreadPool(new NamedThreadFactory("IO")),
             1
         );
+        /*ChannelFactory factory = new OioServerSocketChannelFactory(
+            Executors.newSingleThreadExecutor(new NamedThreadFactory("Accept")),
+            Executors.newSingleThreadExecutor(new NamedThreadFactory("IO"))
+        );*/
+
 
         ServerBootstrap bootstrap = new ServerBootstrap(factory);
 
